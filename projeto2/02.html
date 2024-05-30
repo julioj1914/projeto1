@@ -1,17 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        div.bloco {
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 20px;
+            margin: 10px;
             background-image: url(imagens/wallpaper001.jpg);
+            background-repeat: no-repeat;
+
         }
+
+        div#q1{
+               background-position: left top; 
+        }
+        div#q2{
+            background-position: left center;
+
+        }
+        div#q3{
+            background-position:right bottom ;
+        }
+        div#q4{
+            background-position: center center ;
+
+        }       
+
+
     </style>
 </head>
 <body>
-    <h1>texte de aplicação de fundo </h1>
+    <div class="bloco" id="q1">
+
+    </div>
+    <div class="bloco" id="q2">
+
+    </div>
+    <div class="bloco" id="q3">
+
+    </div>
+    <div class="bloco" id="q4">
+
+    </div>
+   
     
 </body>
 </html>
