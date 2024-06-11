@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>formlario</h1>
+
+    <form action="" method="post">
+
+        <label for="estado">selecione a sua região</label>
+        <select name="es" id="estado">
+
+                <optgroup label="estados do sudeste">
+                    <option value="sp">são paulo</option>
+                    <option value="rj">rio janeiro</option>
+                    <option value="mg">minas gerais </option>
+                </optgroup>
+
+                <optgroup label="estados do nordeste">
+                    <option value="ce">ceara</option>
+                    <option value="se">sergipe</option>
+                    <option value="rn">rio grande do norte</option>
+                </optgroup>
+
+
+
+
+
+        </select> <br> <br>
+
+        <p>
+    
+            <label for="prof">profissão:</label>
+            <input type="text" name="p" id="prof" list="pro">
+            <datalist id="pro">
+                <option>professor</option>
+                <option>policial</option>
+                <option>desenvolvedor</option>
+                <option>açougueiro</option>
+
+            </datalist>
+
+
+            <p>
+                <label for="text">digite seu texto aqui</label>
+                <textarea name="t" id="text"></textarea>
+            </p>
+    
+        </p>
+
+
+
+
+
+
+
+
+
+        <input type="submit" value="enviar">
+        <input type="reset" value="limpar">
+    </form>
+    
+</body>
+</html>
