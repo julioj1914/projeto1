@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>formulario</h1>
+
+    <fieldset>
+        <form action="" method="post">
+            <p>
+                <label for="n1">numero 1: </label>
+                <input type="number" name="n" id="n1" required min="1" max="50" oninput="soma.innerHTML = Number(n1.value) + Number(n2.value)">
+            </p>
+            <p>
+                <label for="n2">numero 2: </label>
+                <input type="number" name="nn" id="n2" required min="1" max="50" oninput="soma.innerHTML = Number(n1.value) + Number(n2.value)">
+            </p>
+        
+            <p>
+                <label for="soma">soma :</label>
+                <output name="s" id="soma">0  </output>
+            </p>
+            <p>
+                <input type="submit" value="enviar">
+                <input type="reset" value="limpar">
+            </p>
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <form action="" method="post">
+            <label for="num">avalie o nosso serviço</label>
+            <input type="range" name="n" id="num" min="1" max="10" value="5"   oninput="number.innerHTML = Number(num.value)">
+            <output id="number"> 5</output>
+        </form>
+        
+    </fieldset>
+
+    <form action="" method="post">
+        <p>
+            <label for="n">em que ano voce nasceu:</label>
+            <input type="number" name="" id="n" min="1950" max="2024"  >
+        </p>
+
+        <p>
+            <label for="idade">sua ideade é</label>
+            <output id="idade">0</output>
+        </p>
+
+
+
+
+    </form>
+</body>
+</html>
