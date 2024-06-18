@@ -8,8 +8,16 @@
 </head>
 <body>
     <div class="container">
-        <div class="arrow"></div>
-        <div class="message">Você encontrou o seu coração!</div>
+        <svg width="500" height="500" viewBox="0 0 500 500">
+            <path id="heartPath" d="M 250,450 
+                                     L 50,250 
+                                     A 100,100 0 0,1 250,100 
+                                     A 100,100 0 0,1 450,250 
+                                     L 250,450 
+                                     Z" fill="none" stroke="red" stroke-width="5"/>
+            <circle id="arrow" cx="250" cy="450" r="7" fill="red"/>
+        </svg>
+        <div class="message">para você que roubou meu coração!</div>
     </div>
     <script src="script.js"></script>
 </body>
