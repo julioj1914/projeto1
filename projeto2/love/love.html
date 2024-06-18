@@ -1,75 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite</title>
-    <style>
-        body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-}
-
-.container {
-    text-align: center;
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-button:nth-child(2) {
-    background-color: #f44336;
-}
-
-button:nth-child(2):hover {
-    background-color: #e53935;
-}
-    </style>
+    <title>Animação de Seta em Coração</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="content">
-            <h1>Você quer sair comigo?</h1>
-            <div class="buttons">
-                <button onclick="alert('Que bom! Vamos nos encontrar em breve!')">Sim</button>
-                <button onclick="alert('Que pena! Talvez outra hora.')">Não</button>
-            </div>
-        </div>
+        <div class="arrow"></div>
+        <div class="message">Você encontrou o seu coração!</div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
