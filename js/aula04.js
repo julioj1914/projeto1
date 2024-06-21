@@ -6,3 +6,4 @@ if (vel > 80) {
 } 
 
 console.log ('dirija sempre usando o sinto de segurança')
+
