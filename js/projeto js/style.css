@@ -29,5 +29,9 @@ section {
 }
 
 select {
-    width: 100px;
+    width: 150px;
+}
+
+div#res {
+    padding: 10px;
 }
