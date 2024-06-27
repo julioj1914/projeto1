@@ -52,12 +52,13 @@ function finalizar() {
             if (valores[pos] < menor)
                 menor = valores[pos]
         }
-
+        media = soma / tot // a media é todos os numeros somados dividios pelo total
         res.innerHTML = '' // para deixar a div res vazia para ir add itens
         res.innerHTML += `<p>ao todo, temos ${tot} numeros cadastrados</p>` // mostra a quantidade de elementos
         res.innerHTML += `<p>o maior valor foi ${maior}</p>`
         res.innerHTML += `<p>o menor valor foi ${menor}</p>`
         res.innerHTML += `<p>somando todos os valores temos ${soma}</p>`
-        res.innerHTML += `<p></p>`
+        
+        res.innerHTML += `<p>a media foi de ${media}</p>`
     }
 }
