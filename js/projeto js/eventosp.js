@@ -10,3 +10,7 @@ function clicar2() { // ondblclick
 function porcima() {
     document.body.style.backgroundColor = 'gray'
 }
+
+function quandosai() {
+    document.body.style.backgroundColor = 'red'
+}
