@@ -15,6 +15,6 @@ function carregar () {
     } else {
         document.body.style.background = '#E0172C'
         foto.src = 'imagens/noite.png'
-    }
+    } 
 
 }

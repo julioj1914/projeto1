@@ -42,3 +42,11 @@ function fatorial (n) {
 }
 
 console.log (fatorial(6))
+
+
+
+//// ARROW FUNCTION
+// NAO USA A PALAVRA FUNCTION
+// É UMA FUNÇÃO ANONIMA, EX:
+
+const lepo = () => "ola mundo!"

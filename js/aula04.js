@@ -7,3 +7,7 @@ if (vel > 80) {
 
 console.log ('dirija sempre usando o sinto de segurança')
 
+let num = [10,20,30,40,50,70]
+num.splice(0,3)
+
+console.log(num)
