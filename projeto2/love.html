@@ -1,77 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite</title>
+    <title>Corações com Mensagens</title>
     <style>
-        body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    background-image: url();
-}
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
 
-    
-.container {
-    text-align: center;
-    background: #ad1f8f6e;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+        .heart {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
 
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
+        .message-heart {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            cursor: pointer;
+        }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+        .message-heart text {
+            font-size: 1px;
+            font-family: Arial, sans-serif;
+            fill: white;
+            text-anchor: middle;
+            dominant-baseline: middle;
+        }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+        @keyframes moveHorizontal {
+            0%, 100% { transform: translateX(100vw); }
+            50% { transform: translateX(-100px); }
+        }
 
-button:hover {
-    background-color: #45a049;
-}
-
-button:nth-child(2) {
-    background-color: #f44336;
-}
-
-button:nth-child(2):hover {
-    background-color: #e53935;
-}
+        .animate {
+            animation: moveHorizontal 5s linear infinite;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <h1> aceita ir no cinema comigo? </h1>
-            <div class="buttons">
-                <button onclick="alert('ebaaaaaaaaaaaaaaaaa')">Sim</button>
-                <button onclick="alert('😭😭​😭​😭​😭​😭​😭​​')">Não</button>
-            </div>
-        </div>
-    </div>
+    <svg class="message-heart" viewBox="0 0 24 24" fill="red">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        <text x="12" y="12" id="heart-message"></text>
+    </svg>
+
+    <script>
+        const messages = ["voce é a mulher mais linda do mundo", "eu sei que sou vacilão", "Mas eu te quero muito"];
+        let currentMessageIndex = 0;
+
+        const messageHeart = document.querySelector(".message-heart");
+        const messageText = document.getElementById("heart-message");
+
+        function updateMessage() {
+            const message = messages[currentMessageIndex];
+            messageText.textContent = message;
+            currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+        }
+
+        messageHeart.addEventListener("click", updateMessage);
+        updateMessage();
+
+        function createMovingHeart(yPosition) {
+            const heart = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            heart.setAttribute("viewBox", "0 0 24 24");
+            heart.setAttribute("fill", "red");
+            heart.classList.add("heart", "animate");
+            heart.style.top = yPosition + "px";
+
+            const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            path.setAttribute("d", "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z");
+
+            heart.appendChild(path);
+            document.body.appendChild(heart);
+        }
+
+        function generateHearts() {
+            const heartCount = 10;
+            for (let i = 0; i < heartCount; i++) {
+                const yPosition = Math.random() * window.innerHeight;
+                createMovingHeart(yPosition);
+            }
+        }
+
+        generateHearts();
+    </script>
 </body>
 </html>
