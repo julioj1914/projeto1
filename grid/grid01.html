@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: gray;
+            border: 1px solid red;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 50px 40px 50px;
+        }
+
+        .container div{
+            background-color: white;
+            padding: 20px;
+            border: 1px solid blue;
+        }
+
+
+
+
+
+
+        /* Exemplos de Uso
+Colunas de Tamanho Fixo:
+
+css
+Copiar código
+.container {
+    display: grid;
+    grid-template-columns: 100px 200px 150px;
+}
+Cria um grid com três colunas onde a primeira tem 100px de largura, a segunda 200px e a terceira 150px.
+Colunas de Tamanho Responsivo:
+
+css
+Copiar código
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+Utiliza frações (fr) para criar colunas que se adaptam ao tamanho disponível. Aqui, a segunda coluna será o dobro da largura das outras duas.
+Colunas Repetidas:
+
+css
+Copiar código
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+Cria três colunas com larguras iguais (usando 1fr), através do uso da função repeat.
+Auto-Preenchimento e Auto-Ajuste:
+
+Auto-Preenchimento:
+css
+Copiar código
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+Cria tantas colunas de 100px quanto cabem no espaço disponível. Se o espaço aumentar, novas colunas são adicionadas automaticamente.
+Auto-Ajuste:
+css
+Copiar código
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+Semelhante ao auto-fill, mas ajusta o tamanho das colunas para preencher todo o espaço disponível.
+
+
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    
+</body>
+</html>

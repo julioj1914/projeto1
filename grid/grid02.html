@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: gray;
+            border: 3px solid red;
+            padding: 15px;
+            display: grid;
+            gap: 5px;
+            grid-template-areas: 
+            'header header header'
+            'sidebar content content'
+            'footer footer footer';
+
+        }
+
+        .container div {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid blue;
+        }
+
+        #header {
+            grid-area: header;
+        }
+
+        #sidebar {
+            grid-area: sidebar;
+            height: 50vh;
+        }
+
+        #content {
+            grid-area: content;
+            height: 50vh;
+        }
+
+        #footer {
+            grid-area: footer;
+        }
+
+
+
+
+
+
+
+
+
+        /* 
+A propriedade grid-template-areas do CSS é uma maneira poderosa e intuitiva de definir o layout de um grid, atribuindo nomes específicos às áreas do grid e organizando-as de forma visualmente clara. Essa propriedade permite que você crie layouts complexos de maneira simplificada, associando áreas do grid a nomes de forma semelhante a desenhar um mapa do layout.
+
+Como Funciona
+Definindo Áreas no CSS:
+
+Primeiro, você define áreas nomeadas no grid-template-areas dentro do container grid.
+Cada nome de área corresponde a um elemento dentro do grid que você deseja posicionar de maneira específica.
+Aplicando Nomes às Áreas:
+
+Dentro do grid, você usa grid-area para associar um elemento específico a uma das áreas nomeadas que você definiu.
+
+
+
+
+        */
+    </style>
+</head>
+<body>
+    <div class="container" id="template-areas"  >
+        <div id="header" >
+            <p>cabeçalho</p>
+        </div>
+        <div id="sidebar">
+            <p>sidebar</p>
+        </div>
+        <div id="content">
+            <p>conteudo</p>
+        </div>
+        <div id="footer">
+            <p>rodape</p>
+        </div>
+    </div>
+    
+</body>
+</html>

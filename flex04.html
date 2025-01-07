@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.container {
+            background-color: chocolate;
+            display: flex;
+            flex-flow: row nowrap;
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+
+        div.item {
+            background-color: aqua;
+            border: 1px solid black;
+            text-align: center;
+            
+            flex-basis: 250px;
+        }
+
+
+        /* flex grow : se eu colocar flex grow: 1 em um elemento e 2 no outro, o segundo
+        elemento ira crescer o dobro do primeiro, agora se eu tiver 2 elementos estiverem com flex-grow:2 
+        os elementos irao crescer por igual */
+
+        /* flex shrink : se um elemento estiver com 1 e outro com 2, o elemento com valor 2 ira diminuir o dobro */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+
+    </div>
+    
+</body>
+</html>
+
